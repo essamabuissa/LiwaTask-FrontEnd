@@ -1,6 +1,7 @@
 import { FETCH_CANDIDATES, SIGN_UP } from "../actions/actionTypes";
 const initialState = {
   candidates: [],
+  user: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,7 +12,11 @@ const reducer = (state = initialState, action) => {
 
     case SIGN_UP:
       const newCandidate = action.payload;
-      return { ...state, candidates: [...state.candidates, newCandidate] };
+      return {
+        ...state,
+        candidates: [...state.candidates, newCandidate],
+        user: newCandidate,
+      };
 
     default:
       return state;

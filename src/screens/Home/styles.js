@@ -6,21 +6,10 @@ export const HomeDiv = styled.div`
   flex-direction: column;
 `;
 
-export const NavBarStyle = styled.nav`
-  border: solid;
-  width: 100%;
-  height: 70px;
+export const ListStyle = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-export const NavItem = styled.text`
-  font-weight: bold;
-  font-size: 20px;
-`;
-
-export const FormStyle = styled.form`
-  width: 20%;
-  border-style: dotted;
+  flex-direction: row;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10px;
 `;

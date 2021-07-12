@@ -1,14 +1,19 @@
-import { TextFieldStyle, SignUpDiv } from "../screens/SignUp/styles";
-const TextField = ({ onChange, label }) => {
+import { TextFieldStyle, SignUpDiv } from "./styles";
+const TextField = ({ onChange, label, type, placeHolder }) => {
   return (
     <div
       style={{
-        alignItems: "center",
+        alignItems: "flex-start",
         flexDirection: "column",
         display: "flex",
       }}>
-      <text style={{ fontSize: "10px" }}>{label}</text>
-      <TextFieldStyle onChange={onChange} label="hello" />
+      <text style={{ fontSize: "10px", fontWeight: "bold" }}>{label}</text>
+      <TextFieldStyle
+        placeholder={placeHolder}
+        type={type}
+        onChange={onChange}
+        label="hello"
+      />
     </div>
   );
 };
